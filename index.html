@@ -276,7 +276,7 @@ overflow: hidden;
                 var decryptedTexte = aesjs.utils.utf8.fromBytes(decryptedBytese);
                 console.log(decryptedTexte);
                 document.querySelector("#kkel").value = decryptedTexte;
-                $("#dec2").fadeIn(333);
+                $("#dec2").delay(333).fadeIn(333);
             }
 
             function fin() {
