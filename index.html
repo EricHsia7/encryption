@@ -12,6 +12,12 @@
 密碼<input type="text" id="kkk">
 金鑰<input type="text" id="kk">
 <a href="javascript:aaa()">aes</a>
+  
+  <br><br>
+  金鑰<input type="text" id="texte">
+密碼<input type="text" id="kkke">
+文本<input type="text" id="kkel">
+<a href="javascript:bbb()">de</a>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/aes-js/3.1.2/index.min.js'></script>
   <script>
@@ -38,20 +44,23 @@ document.querySelector('#kk').value = encryptedHex ;
     
     
 // When ready to decrypt the hex string, convert it back to bytes
-function bbb(gbu,kiu) {
+function bbb() {
   var keye = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
                16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28,
                29, 30, 31];
+  var gbu = document.querySelector('#texte').value ;
+  var kiu = document.querySelector('#kkke').value
 var encryptedBytese = aesjs.utils.hex.toBytes(gbu);
 
 // The counter mode of operation maintains internal state, so to
 // decrypt a new instance must be instantiated.
-var aesCtre = new aesjs.ModeOfOperation.ctr(keye, new aesjs.Counter(kiu));
+var aesCtre = new aesjs.ModeOfOperation.ctr(keye, new aesjs.Counter(parseInt(kiu)));
 var decryptedBytese = aesCtre.decrypt(encryptedBytese);
 
 // Convert our bytes back into text
 var decryptedTexte = aesjs.utils.utf8.fromBytes(decryptedBytese);
 console.log(decryptedTexte);
+  document.querySelector('#kkel').value = decryptedTexte;
 // "Text may be any length you wish, no padding is required."
 }
   </script>
