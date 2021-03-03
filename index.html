@@ -122,7 +122,7 @@ overflow: hidden;
   padding:8px;
   border-radius:99em;
   box-shadow:0 0 15px 1px rgba(0,0,0,0.05);
-  color:#fff;
+  color:#333;
   text-decoration:none;
   font-size:20px;
   overflow: hidden;
@@ -160,12 +160,15 @@ overflow: hidden;
             <div class="page">
                 <div class="pag" id="enc1">
                     <textarea type="text" id="text" placeholder="輸入文字"></textarea>
+                    <br>
                     <a href="javascript:aaa()" class="button">加密</a>
                 </div>
 
                 <div class="pag" id="enc2" style="display: none;">
                     <textarea type="text" id="kk" placeholder="金鑰" readonly="readonly"></textarea>
+                    <br>
                     <input type="text" id="kkk" placeholder="密碼" readonly="readonly">
+                    <br>
                     <a href="javascript:fin()" class="button">完成</a>
                 </div>
             </div>
@@ -173,12 +176,15 @@ overflow: hidden;
             <div class="page" style="left: 50%;transform:translate(-50%);">
                 <div class="pag" id="dec1">
                     <textarea type="text" id="texte" placeholder="輸入金鑰"></textarea>
+                    <br>
                     <input type="text" id="kkke" placeholder="輸入密碼" />
+                    <br>
                     <a href="javascript:bbb()" class="button">解密</a>
                 </div>
 
                 <div class="pag" id="dec2" style="display: none;">
                     <textarea type="text" id="kkel" placeholder="文字" readonly="readonly"></textarea>
+                    <br>
                     <a href="javascript:fin()" class="button">完成</a>
                 </div>
             </div>
