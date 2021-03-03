@@ -153,13 +153,13 @@ more
 
 <div id="bottom" class="bottombar">
         <div class="bottom-btn-b" style="left: 0%;">
-            <a href="javascript:en()"><img src="icon/home_1.png" class="btn-cen" id="hico" /></a>
+            <a href="javascript:en()"><img src="lock_1.png" class="btn-cen" id="hico" /></a>
         </div>
         <div class="bottom-btn-b" style="left: 50%; transform: translate(-50%, 0%);">
-            <a href="javascript:de()"><img src="icon/bell.png" class="btn-cen" id="bico" /></a>
+            <a href="javascript:de()"><img src="unlock.png" class="btn-cen" id="bico" /></a>
         </div>
         <div class="bottom-btn-b" style="right: 0%;">
-            <a href="javascript:more()"><img src="icon/more.png" class="btn-cen" id="mico" /></a>
+            <a href="javascript:more()"><img src="more.png" class="btn-cen" id="mico" /></a>
         </div>
     </div>
 
@@ -227,9 +227,9 @@ more
             
             function en() {
             $(".allpage").css({'left':'0%'});
-  $('#hico').attr('src','icon/lock_1.png');
-  $('#bico').attr('src','icon/unlock.png');
-  $('#mico').attr('src','icon/more.png');
+  $('#hico').attr('src','lock_1.png');
+  $('#bico').attr('src','unlock.png');
+  $('#mico').attr('src','more.png');
   
   $('#bellbg').fadeOut(1);
   $('#morebg').fadeOut(1);
@@ -237,18 +237,18 @@ more
   
   function de() {
   $(".allpage").css({'left':'-100%'});
-  $('#hico').attr('src','icon/lock.png');
-  $('#bico').attr('src','icon/unlock_1.png');
-  $('#mico').attr('src','icon/more.png');
+  $('#hico').attr('src','lock.png');
+  $('#bico').attr('src','unlock_1.png');
+  $('#mico').attr('src','more.png');
     
   $('#bellbg').fadeIn(1);
   $('#morebg').fadeOut(1);
 }
   function more() {
   $(".allpage").css({'left':'-200%'});
-  $('#hico').attr('src','icon/lock.png');
-  $('#bico').attr('src','icon/unlock.png');
-  $('#mico').attr('src','icon/more_1.png');
+  $('#hico').attr('src','lock.png');
+  $('#bico').attr('src','unlock.png');
+  $('#mico').attr('src','more_1.png');
   
   $('#bellbg').fadeOut(1);
   $('#morebg').fadeIn(1);
