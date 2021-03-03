@@ -118,6 +118,8 @@ overflow: hidden;
 }
             
             .button {
+                font-family: "Noto Sans TC", sans-serif;
+                font-weight: 500;
   background:#fff;
   padding:8px;
   border-radius:99em;
@@ -128,7 +130,7 @@ overflow: hidden;
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  margin-top:25px;
+  margin-top:45px;
 }
 
 .button::before {
@@ -154,6 +156,8 @@ overflow: hidden;
     transform: translate(-50%, -50%) scale(0);
     overflow: hidden;
 }
+            h1 {font-family: "Noto Sans TC", sans-serif;
+                font-weight: 900;}
         </style>
     </head>
     <body>
@@ -161,6 +165,7 @@ overflow: hidden;
             <div class="page">
                 <div class="pag" id="enc1">
                     <center>
+                        <h1>加密</h1>
                     <textarea type="text" id="text" placeholder="輸入文字"></textarea>
                     <br>
                     <a href="javascript:aaa()" class="button">加密</a>
@@ -169,6 +174,7 @@ overflow: hidden;
 
                 <div class="pag" id="enc2" style="display: none;">
                     <center>
+                        <h1>加密</h1>
                     <textarea type="text" id="kk" placeholder="金鑰" readonly="readonly"></textarea>
                     <br>
                     <input type="text" id="kkk" placeholder="密碼" readonly="readonly">
@@ -181,6 +187,7 @@ overflow: hidden;
             <div class="page" style="left: 50%;transform:translate(-50%);">
                 <div class="pag" id="dec1">
                     <center>
+                        <h1>解密</h1>
                     <textarea type="text" id="texte" placeholder="輸入金鑰"></textarea>
                     <br>
                     <input type="text" id="kkke" placeholder="輸入密碼" />
@@ -191,6 +198,7 @@ overflow: hidden;
 
                 <div class="pag" id="dec2" style="display: none;">
                     <center>
+                        <h1>解密</h1>
                     <textarea type="text" id="kkel" placeholder="文字" readonly="readonly"></textarea>
                     <br>
                     <a href="javascript:fin()" class="button">完成</a>
