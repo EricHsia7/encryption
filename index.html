@@ -31,9 +31,6 @@
                 width: 100%;
                 height: 100%;
                 background: #fff;
-                display: flex;
-                flex-direction:column;
-                justify-content: center;
             }
             input,
             textarea {
@@ -44,9 +41,9 @@
                 font-size: 25px;
                 width: 90%;
                 max-width: 320px;
-
                 font-family: "Noto Sans TC", sans-serif;
                 font-weight: 500;
+                
             }
             textarea {
                 border-radius: 8px;
@@ -163,33 +160,41 @@ overflow: hidden;
         <div class="allpage">
             <div class="page">
                 <div class="pag" id="enc1">
+                    <center>
                     <textarea type="text" id="text" placeholder="輸入文字"></textarea>
                     <br>
                     <a href="javascript:aaa()" class="button">加密</a>
+                        </center>
                 </div>
 
                 <div class="pag" id="enc2" style="display: none;">
+                    <center>
                     <textarea type="text" id="kk" placeholder="金鑰" readonly="readonly"></textarea>
                     <br>
                     <input type="text" id="kkk" placeholder="密碼" readonly="readonly">
                     <br>
                     <a href="javascript:fin()" class="button">完成</a>
+                        </center>
                 </div>
             </div>
 
             <div class="page" style="left: 50%;transform:translate(-50%);">
                 <div class="pag" id="dec1">
+                    <center>
                     <textarea type="text" id="texte" placeholder="輸入金鑰"></textarea>
                     <br>
                     <input type="text" id="kkke" placeholder="輸入密碼" />
                     <br>
                     <a href="javascript:bbb()" class="button">解密</a>
+                        </center>
                 </div>
 
                 <div class="pag" id="dec2" style="display: none;">
+                    <center>
                     <textarea type="text" id="kkel" placeholder="文字" readonly="readonly"></textarea>
                     <br>
                     <a href="javascript:fin()" class="button">完成</a>
+                        </center>
                 </div>
             </div>
 
