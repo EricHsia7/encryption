@@ -261,7 +261,7 @@ overflow: hidden;
                 console.log(encryptedHex);
                 document.querySelector("#kk").value = encryptedHex;
                 $("#enc2").delay(333).fadeIn(333);
-                document.querySelector("#text").value = '' ;
+                
             }
 
            
@@ -281,12 +281,14 @@ overflow: hidden;
                 console.log(decryptedTexte);
                 document.querySelector("#kkel").value = decryptedTexte;
                 $("#dec2").delay(333).fadeIn(333);
-                document.querySelector("#texte").value = '' ;
-                document.querySelector("#kkke").value = '' ;
+                
             }
 
             function fin() {
                 $("#enc2,#dec2").delay(333).fadeOut(333);
+                document.querySelector("#texte").value = '' ;
+                document.querySelector("#kkke").value = '' ;
+                document.querySelector("#text").value = '' ;
             }
            function copy(cooid) {
 var copys = document.getElementById(cooid);
