@@ -257,7 +257,7 @@ overflow: hidden;
                 var encryptedHex = aesjs.utils.hex.fromBytes(encryptedBytes);
                 console.log(encryptedHex);
                 document.querySelector("#kk").value = encryptedHex;
-                $("#enc2").fadeIn(333);
+                $("#enc2").delay(333).fadeIn(333);
             }
 
            
@@ -280,7 +280,7 @@ overflow: hidden;
             }
 
             function fin() {
-                $("#enc2,#dec2").fadeOut(333);
+                $("#enc2,#dec2").delay(333).fadeOut(333);
             }
            
             
@@ -291,9 +291,6 @@ overflow: hidden;
   $('#hico').attr('src','lock_1.png');
   $('#bico').attr('src','unlock.png');
   $('#mico').attr('src','more.png');
-  
-  $('#bellbg').fadeOut(1);
-  $('#morebg').fadeOut(1);
 }
   
   function de() {
@@ -301,18 +298,12 @@ overflow: hidden;
   $('#hico').attr('src','lock.png');
   $('#bico').attr('src','unlock_1.png');
   $('#mico').attr('src','more.png');
-    
-  $('#bellbg').fadeIn(1);
-  $('#morebg').fadeOut(1);
 }
   function more() {
   $(".allpage").css({'left':'-200%'});
   $('#hico').attr('src','lock.png');
   $('#bico').attr('src','unlock.png');
   $('#mico').attr('src','more_1.png');
-  
-  $('#bellbg').fadeOut(1);
-  $('#morebg').fadeIn(1);
 }
         </script>
     </body>
