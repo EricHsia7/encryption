@@ -228,13 +228,12 @@ position:fixed;left:0px;top:0px;width:100%;height:100%;background: #FFEB00;
                 </div>
             </div>
             <div class="page" style="left:50%;">
-              
                     <div class="pag" id="uenc1">
                     <center>
                         <h1>連結</h1>
-                    <textarea type="text" id="text" placeholder="輸入文字"></textarea>
+                    <textarea type="text" id="textu" placeholder="輸入文字"></textarea>
                     <br><br>
-                    <a href="javascript:aaa()" class="button">產生</a>
+                    <a href="javascript:aaau()" class="button">產生</a>
                         <br><br>
                         </center>
                 </div>
@@ -242,13 +241,13 @@ position:fixed;left:0px;top:0px;width:100%;height:100%;background: #FFEB00;
                 <div class="pag" id="uenc2" style="display: none;">
                     <center>
                         <h1>連結</h1>
-                    <textarea type="text" id="kk" placeholder="金鑰" readonly="readonly"></textarea>
+                    <textarea type="text" id="kku" placeholder="金鑰" readonly="readonly"></textarea>
                     <br><br>
-                        <a href="javascript:copy('kk','金鑰')" class="button">複製金鑰</a>
+                        <a href="javascript:copy('kku','連結')" class="button">複製連結</a>
                         <br><br>
-                    <input type="text" id="kkk" placeholder="密碼" readonly="readonly">
+                    <input type="text" id="kkku" placeholder="密碼" readonly="readonly">
                     <br><br>
-                        <a href="javascript:copy('kkk','密碼')" class="button">複製密碼</a>
+                        <a href="javascript:copy('kkku','密碼')" class="button">複製密碼</a>
                         <br><br>
                     <a href="javascript:fin()" class="button">完成</a>
                         <br><br>
@@ -384,7 +383,7 @@ document.execCommand("Copy");
         function make() {
                 var today=new Date();
                 var dk = aaau(today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate()) ;
-                var ed = aaau(document.getElementById('text').value) ;
+                var ed = aaau(document.getElementById('textu').value) ;
                 document.getElementById('kk').value = 'https://erichsia7.github.io/url/p/?key=' + ed[0] + '&d=' + dk[0] + '&dc=' + dk[1]
                 document.getElementById('kkk').value = ed[1] ;
                 $('body').prompt({'message':'已產生連結','time':1000,'animate':'slide'});
