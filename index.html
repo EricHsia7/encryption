@@ -254,7 +254,7 @@ position:fixed;left:0px;top:0px;width:100%;height:100%;background: #FFEB00;
             <a href="javascript:de()"><img src="unlock.png" class="btn-cen" id="bico" /></a>
         </div>
             <div class="bottom-btn-b" style="left: 50%;">
-            <a href="javascript:enur()"><img src="unlock.png" class="btn-cen" id="uico" /></a>
+            <a href="javascript:enur()"><img src="link.png" class="btn-cen" id="uico" /></a>
         </div>
         <div class="bottom-btn-b" style="left: 75%;">
             <a href="javascript:more()"><img src="more.png" class="btn-cen" id="mico" /></a>
@@ -338,6 +338,7 @@ document.execCommand("Copy");
   $('#hico').attr('src','lock_1.png');
   $('#bico').attr('src','unlock.png');
   $('#mico').attr('src','more.png');
+                $('#uico').attr('src','url.png');
 }
   
   function de() {
@@ -345,18 +346,21 @@ document.execCommand("Copy");
   $('#hico').attr('src','lock.png');
   $('#bico').attr('src','unlock_1.png');
   $('#mico').attr('src','more.png');
+      $('#uico').attr('src','url.png');
 }
             function enur() {
   $(".allpage").css({'left':'-200%'});
   $('#hico').attr('src','lock.png');
-  $('#bico').attr('src','unlock_1.png');
+  $('#bico').attr('src','unlock.png');
   $('#mico').attr('src','more.png');
+  $('#uico').attr('src','url_1.png');
 }
   function more() {
   $(".allpage").css({'left':'-300%'});
   $('#hico').attr('src','lock.png');
   $('#bico').attr('src','unlock.png');
   $('#mico').attr('src','more_1.png');
+      $('#uico').attr('src','url.png');
 }
         </script>
         <style>
