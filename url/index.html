@@ -261,7 +261,7 @@ var url = new URL(getUrlString);
 	document.querySelector('#pwd').onpaste = e => {
     ooo();
        $('#pwd').blur();
-    // e.preventDefault();
+			$('body').prompt({'message':'已貼上','time':1000,'animate':'slide'});
 };	
 		
 		
