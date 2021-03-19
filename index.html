@@ -19,7 +19,7 @@
                 position: fixed;
                 top: 0px;
                 left: 0px;
-                width: 300%;
+                width: 400%;
                 height: 100%;
                 background: #fff;
                 transition:0.5s;
@@ -28,7 +28,7 @@
                 position: absolute;
                 left: 0px;
                 top: 0px;
-                width: 33%;
+                width: 25%;
                 height: calc(100% - 52px);
                 background: #fff;
             }
@@ -204,7 +204,7 @@ position:fixed;left:0px;top:0px;width:100%;height:100%;background: #FFEB00;
                 </div>
             </div>
 
-            <div class="page" style="left: 50%;transform:translate(-50%);">
+            <div class="page" style="left: 25%;">
                 <div class="pag" id="dec1">
                     <center>
                         <h1>解密</h1>
@@ -227,8 +227,12 @@ position:fixed;left:0px;top:0px;width:100%;height:100%;background: #FFEB00;
                         </center>
                 </div>
             </div>
-
-<div class="page" style="right: 0px;left:auto;">
+            <div class="page" style="left:50%;">
+                <center>
+                        <h1>連結</h1>
+                </center>
+            </div>
+<div class="page" style="left:75%;">
     <center>
                         <h1>更多</h1>
 <a href="javascript:window.location.reload()" class="button" >
@@ -252,7 +256,7 @@ position:fixed;left:0px;top:0px;width:100%;height:100%;background: #FFEB00;
             <div class="bottom-btn-b" style="left: 50%;">
             <a href="javascript:enur()"><img src="unlock.png" class="btn-cen" id="uico" /></a>
         </div>
-        <div class="bottom-btn-b" style="right: 75%;">
+        <div class="bottom-btn-b" style="left: 75%;">
             <a href="javascript:more()"><img src="more.png" class="btn-cen" id="mico" /></a>
         </div>
     </div>
@@ -342,8 +346,14 @@ document.execCommand("Copy");
   $('#bico').attr('src','unlock_1.png');
   $('#mico').attr('src','more.png');
 }
-  function more() {
+            function enur() {
   $(".allpage").css({'left':'-200%'});
+  $('#hico').attr('src','lock.png');
+  $('#bico').attr('src','unlock_1.png');
+  $('#mico').attr('src','more.png');
+}
+  function more() {
+  $(".allpage").css({'left':'-300%'});
   $('#hico').attr('src','lock.png');
   $('#bico').attr('src','unlock.png');
   $('#mico').attr('src','more_1.png');
