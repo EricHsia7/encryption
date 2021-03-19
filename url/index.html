@@ -258,4 +258,30 @@ var url = new URL(getUrlString);
        $('#pwd').blur();
     }
 });
+		document.body.oncontextmenu = e => {
+    console.log(e, '右鍵');
+			$('body').prompt({'message':'已禁止右鍵','time':1000,'animate':'slide'});
+    return false;
+};
+// 禁止文字選擇。
+document.body.onselectstart = e => {
+    console.log(e, '文字選擇');
+	$('body').prompt({'message':'已禁止選取','time':1000,'animate':'slide'});
+    return false;
+    // e.preventDefault();
+};
+// 禁止複製
+document.body.oncopy = e => {
+    console.log(e, 'copy');
+	$('body').prompt({'message':'已禁止複製','time':1000,'animate':'slide'});
+    return false;
+    // e.preventDefault();
+}
+// 禁止剪下
+document.body.oncut = e => {
+    console.log(e, 'cut');
+	$('body').prompt({'message':'已禁止剪下','time':1000,'animate':'slide'});
+    return false;
+    // e.preventDefault();
+};
         </script>
