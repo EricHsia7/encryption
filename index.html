@@ -233,7 +233,7 @@ position:fixed;left:0px;top:0px;width:100%;height:100%;background: #FFEB00;
                         <h1>連結</h1>
                     <textarea type="text" id="textu" placeholder="輸入文字"></textarea>
                     <br><br>
-                    <a href="javascript:aaau()" class="button">產生</a>
+                    <a href="javascript:make()" class="button">產生</a>
                         <br><br>
                         </center>
                 </div>
@@ -342,10 +342,13 @@ position:fixed;left:0px;top:0px;width:100%;height:100%;background: #FFEB00;
             }
 
             function fin() {
-                $("#enc2,#dec2").delay(333).fadeOut(333);
+                $("#enc2,#dec2,#uenc2").delay(333).fadeOut(333);
                 document.querySelector("#texte").value = '' ;
                 document.querySelector("#kkke").value = '' ;
                 document.querySelector("#text").value = '' ;
+                document.querySelector("#textu").value = '' ;
+                document.querySelector("#kku").value = '' ;
+                document.querySelector("#kkku").value = '' ;
             }
            function copy(cooid,typ) {
 var copys = document.getElementById(cooid);
@@ -384,8 +387,8 @@ document.execCommand("Copy");
                 var today=new Date();
                 var dk = aaau(today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate()) ;
                 var ed = aaau(document.getElementById('textu').value) ;
-                document.getElementById('kk').value = 'https://erichsia7.github.io/url/p/?key=' + ed[0] + '&d=' + dk[0] + '&dc=' + dk[1]
-                document.getElementById('kkk').value = ed[1] ;
+                document.getElementById('kku').value = 'https://erichsia7.github.io/url/p/?key=' + ed[0] + '&d=' + dk[0] + '&dc=' + dk[1]
+                document.getElementById('kkku').value = ed[1] ;
                 $('body').prompt({'message':'已產生連結','time':1000,'animate':'slide'});
             $('#uenc2').delay(333).fadeIn(333);
         }
