@@ -258,6 +258,14 @@ var url = new URL(getUrlString);
        $('#pwd').blur();
     }
 });
+	document.querySelector('#pwd').onpaste = e => {
+    ooo();
+       $('#pwd').blur();
+    // e.preventDefault();
+};	
+		
+		
+		
 		document.body.oncontextmenu = e => {
     console.log(e, '右鍵');
 			$('body').prompt({'message':'已禁止右鍵','time':1000,'animate':'slide'});
