@@ -293,4 +293,14 @@ document.body.oncut = e => {
     return false;
     // e.preventDefault();
 };
+		document.onkeydown=function(){
+var e=window.event||arguments[0];
+if(e.keyCode==123){
+$('body').prompt({'message':'已禁止F12','time':1000,'animate':'slide'});
+return false;
+}else if((e.ctrlKey)&&(e.shiftKey)&&(e.keyCode==73)){
+$('body').prompt({'message':'已禁止Ctrl Shift I','time':1000,'animate':'slide'});
+return false;
+}
+};
         </script>
