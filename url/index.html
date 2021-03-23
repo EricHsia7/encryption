@@ -241,6 +241,7 @@ var url = new URL(getUrlString);
                 document.querySelector('#output').innerHTML = decryptedTexte ;
 			$('#fft').fadeOut(1);
 			$('#fftt').delay(1200).fadeIn(1);
+			setTimeout("$('body').prompt({'message':'已解密','time':1000,'animate':'slide'});",1200);
             }
 		
 		
@@ -253,14 +254,17 @@ var url = new URL(getUrlString);
 		else {
 			$('#fftts').delay(1200).fadeIn(1);
 		}
+		
 $(document).keyup(function (e) {
     if ($("#pwd").is(":focus") && (e.keyCode == 13)) {
        ooo();
        $('#pwd').blur();
+	    $('body').prompt({'message':'正在解密','time':1000,'animate':'slide'});
     }
 	if($('#pwd').val().length + '' === "6") {
 ooo();
        $('#pwd').blur();
+	$('body').prompt({'message':'正在解密','time':1000,'animate':'slide'});
 }
 });
 		
@@ -268,7 +272,7 @@ ooo();
 		
 	document.querySelector('#pwd').onpaste = e => {
     
-       setTimeout("ooo();$('#pwd').blur();$('body').prompt({'message':'已貼上','time':1000,'animate':'slide'});",300);
+       setTimeout("ooo();$('#pwd').blur();$('body').prompt({'message':'已貼上，正在解密','time':1000,'animate':'slide'});",300);
 			
 };	
 		
