@@ -253,19 +253,18 @@ var url = new URL(getUrlString);
 		else {
 			$('#fftts').delay(1200).fadeIn(1);
 		}
-				    $(document).keyup(function (e) {
+$(document).keyup(function (e) {
     if ($("#pwd").is(":focus") && (e.keyCode == 13)) {
        ooo();
        $('#pwd').blur();
     }
-});
-		
-		$('#pwd').keyup(function() {
-if($('#pwd').val().length = 6) {
+	if($('#pwd').val().length = 6) {
 ooo();
        $('#pwd').blur();
 }
-		});
+});
+		
+
 		
 	document.querySelector('#pwd').onpaste = e => {
     
