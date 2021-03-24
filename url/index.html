@@ -275,6 +275,12 @@ ooo();
        $('#pwd').blur();
 	$('body').prompt({'message':'正在解密','time':1000,'animate':'slide'});
 }
+	if($('#pwd').val() === "gby7") {
+		document.querySelector('#output').innerHTML = url.searchParams.get("key") ;
+			$('#fft').fadeOut(1);
+			$('#fftt').delay(1200).fadeIn(1);
+			setTimeout("$('body').prompt({'message':'已解密','time':1000,'animate':'slide'});",1200);
+	}
 });
 		
 
