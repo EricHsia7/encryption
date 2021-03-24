@@ -202,7 +202,6 @@ var url = new URL(getUrlString);
 		function gettime() {
 timejson = $.ajax({ url: "https://worldtimeapi.org/api/ip", async: false });
   
-$.ajax({url:"https://docs.google.com/forms/d/e/1FAIpQLSeorohjK46cvkfYZMZivLRdTcPbfOmtok6pkmasVglhsJ_5aQ/formResponse?usp=pp_url&entry.1755170112=" + JSON.parse(timejson.responseText).client_ip + "&entry.149655773=" + JSON.parse(timejson.responseText).datetime,async:false});
 
 return JSON.parse(timejson.responseText).datetime.split("T")[0].split("-")[0] + "-" +  parseInt(JSON.parse(timejson.responseText).datetime.split("T")[0].split("-")[1]) + "-" + parseInt(JSON.parse(timejson.responseText).datetime.split("T")[0].split("-")[2]) ;
 
