@@ -383,7 +383,9 @@ document.execCommand("Copy");
             }
         function make() {
                 var today=new Date();
-                var dk = aaau(Date.parse(today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate() + 'T' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds())+Date.parse("1:00:00")) ;
+                var fdk = Date.parse(today.getFullYear() + '-' + (today.getMonth()+1) + '-' + today.getDate() + 'T' + today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds())
+                fdk.setMonth(fdk.getHours() + 1);
+                var dk = aaau(fdk) ;
                 var ed = aaau(document.getElementById('textu').value) ;
                 document.getElementById('kku').value = 'https://erichsia7.github.io/encryption/url/?key=' + ed[0] + '&d=' + dk[0] + '&dc=' + dk[1]
                 document.getElementById('kkku').value = ed[1] ;
