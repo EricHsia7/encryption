@@ -233,7 +233,7 @@ position:fixed;left:0px;top:0px;width:100%;height:100%;background: #FFEB00;
                         <h1>連結</h1>
                     <textarea type="text" id="textu" placeholder="輸入文字"></textarea>
                     <br><br>
-                        <div class="select" id="select">
+                        <div class="select" id="exptime">
 <li value="30">30分鐘</li>
 <li value="60">1小時</li>
 <li value="120">2小時</li>
@@ -397,7 +397,11 @@ document.execCommand("Copy");
                 
             }
         function make() {
+            var expt = parseInt(document.getElementById('exptime').getAttribute('value')) ;
                 var today=new Date();
+                var d1 = new Date(today.getFullYear() + '/' + (today.getMonth()+1) + '/' + today.getDate() + ' ' + (today.getHours()+1) + ':' + today.getMinutes() + ':' + today.getSeconds());
+                d1.setMinutes(d1.Minutes()+expt); 
+            
                 var dk = aaau(today.getFullYear() + '/' + (today.getMonth()+1) + '/' + today.getDate() + ' ' + (today.getHours()+1) + ':' + today.getMinutes() + ':' + today.getSeconds()) ;
                 var ed = aaau(document.getElementById('textu').value) ;
                 document.getElementById('kku').value = 'https://erichsia7.github.io/encryption/url/?key=' + ed[0] + '&d=' + dk[0] + '&dc=' + dk[1]
