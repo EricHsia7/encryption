@@ -400,9 +400,10 @@ document.execCommand("Copy");
             var expt = parseInt(document.getElementById('exptime').getAttribute('value')) ;
                 var today=new Date();
                 var d1 = new Date(today.getFullYear() + '/' + (today.getMonth()+1) + '/' + today.getDate() + ' ' + (today.getHours()+1) + ':' + today.getMinutes() + ':' + today.getSeconds());
-                //d1.setMinutes(d1.Minutes()+expt);
-            d1.setTime(d1.setMinutes(d1.getMinutes() + expt));
-                var dk = aaau(today.getFullYear() + '/' + (today.getMonth()+1) + '/' + today.getDate() + ' ' + (today.getHours()+1) + ':' + today.getMinutes() + ':' + today.getSeconds()) ;
+                d1.setMinutes(d1.Minutes()+expt);
+           // d1.setTime(d1.setMinutes(d1.getMinutes() + expt));
+            
+                var dk = aaau(d1) ;
                 var ed = aaau(document.getElementById('textu').value) ;
                 document.getElementById('kku').value = 'https://erichsia7.github.io/encryption/url/?key=' + ed[0] + '&d=' + dk[0] + '&dc=' + dk[1]
                 document.getElementById('kkku').value = ed[1] ;
