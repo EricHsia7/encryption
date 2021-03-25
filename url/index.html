@@ -202,7 +202,7 @@ var url = new URL(getUrlString);
 		function gettime() {
 			
 var timejson = $.ajax({ url: "https://worldtimeapi.org/api/ip",async:false});
-  return Date.parse(JSON.parse(timejson.responseText).datetime.split("T")[0].split("-")[0] + "-" +  parseInt(JSON.parse(timejson.responseText).datetime.split("T")[0].split("-")[1]) + "-" + parseInt(JSON.parse(timejson.responseText).datetime.split("T")[0].split("-")[2]) + 'T' +  JSON.parse(timejson.responseText).datetime.split("T")[1].split(".")[0]) ;
+  return Date.parse(JSON.parse(timejson.responseText).datetime.split("T")[0].split("-")[0] + "-" +  parseInt(JSON.parse(timejson.responseText).datetime.split("T")[0].split("-")[1]) + "-" + parseInt(JSON.parse(timejson.responseText).datetime.split("T")[0].split("-")[2]) + ' ' +  JSON.parse(timejson.responseText).datetime.split("T")[1].split(".")[0]) ;
 }
             function bbb() {
                 var keye = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
