@@ -447,10 +447,12 @@ document.execCommand("Copy");
       $('#uico').attr('src','url.png');
 }
             if(url.searchParams.get("po") === "1") {
-                $('.liconbg,.bottombar').fadeOut(1);
+                $('.bottombar').fadeOut(1);
                 enur();
                 $('.allpage').css({'transition':'0s'});
-            }
+                $('.liconbg').css({'background':'#fff'});
+                $('.licon').remove()
+            };
             else {
                 $('.liconbg').delay(1500).fadeOut(555);
             }
