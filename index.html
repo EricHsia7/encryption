@@ -449,6 +449,7 @@ document.execCommand("Copy");
             if(url.searchParams.get("po") === "1") {
                 $('.liconbg,.bottombar').fadeOut(1);
                 enur();
+                $('.allpage').css({'transition':'0s'});
             }
             else {
                 $('.liconbg').delay(1500).fadeOut(555);
