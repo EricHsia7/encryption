@@ -310,7 +310,7 @@ position:fixed;left:0px;top:0px;width:100%;height:100%;background: #FFEB00;
 var url = new URL(getUrlString);
             
             
-            $('.liconbg').delay(1500).fadeOut(555);
+            
             
             
             function aaa() {
@@ -449,6 +449,9 @@ document.execCommand("Copy");
             if(url.searchParams.get("po") === "1") {
                 $('.liconbg,.bottombar').fadeOut(1);
                 enur();
+            }
+            else {
+                $('.liconbg').delay(1500).fadeOut(555);
             }
         </script>
         <style>
