@@ -564,8 +564,11 @@ document.execCommand("Copy");
                 $('.allpage').css({'transition':'0s'});
                 $('.liconbg').css({'background':'#fff'});
                 $('.loadb').fadeIn(1);
+		    $('.liconbg').delay(1500).fadeOut(1);
             }
-            $('.liconbg').delay(1500).fadeOut(555);
+            else {
+		    $('.liconbg').delay(1500).fadeOut(555);
+	    }
         </script>
         <style>
 .bottombar {
