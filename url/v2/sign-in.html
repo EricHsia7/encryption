@@ -9,39 +9,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
   <script src="https://apis.google.com/js/api:client.js"></script>
-  <script>
-  var googleUser = {};
-  var startApp = function() {
-    gapi.load('auth2', function(){
-      // Retrieve the singleton for the GoogleAuth library and set up the client.
-      auth2 = gapi.auth2.init({
-        client_id: '826056880438-m62i8rsl9hrubnls88asvka2th09tpps.apps.googleusercontent.com',
-        cookiepolicy: 'https://erichsia7.github.io/',
-      });
-      attachSignin(document.getElementById('customBtn'));
-    });
-  };
- 
-  function attachSignin(element) {
-    console.log(element.id);
-    auth2.attachClickHandler(element, {},
-        function(googleUser) {
-          document.getElementById('customBtn').innerText = "載入中";
-               
-      $.ajax({
-            type:"get",
-            url:'https://script.google.com/macros/s/AKfycbzaYfdP6h4OSwN209y7eb4sS-MgChQ2sdTXekueil7Tq-rgmCiO87Gf/exec?email=' + googleUser.getBasicProfile().getEmail()  ,
-            dataType:"text",
-            success:function(res){
-            window.location.replace(res);
-            }
-        })
-      
-        }, function(error) {
-          alert(JSON.stringify(error, undefined, 2));
-        });
-  }
-  </script>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
 #customBtn {
@@ -77,10 +45,48 @@ float:left;
   <div id="gSignInWrapper">
     <div id="customBtn" class="customGPlusSignIn">
 <div class="icon left"></div>
-<div class="text left">Sign in with Google</div>
+<div class="text left">使用Google登入</div>
 </div>
   </div>
   <div id="name"></div>
+    
+    
+    
+    
+      <script>
+  var googleUser = {};
+  var startApp = function() {
+    gapi.load('auth2', function(){
+      // Retrieve the singleton for the GoogleAuth library and set up the client.
+      auth2 = gapi.auth2.init({
+        client_id: '826056880438-m62i8rsl9hrubnls88asvka2th09tpps.apps.googleusercontent.com',
+        cookiepolicy: 'https://erichsia7.github.io/',
+      });
+      attachSignin(document.getElementById('customBtn'));
+    });
+  };
+ 
+  function attachSignin(element) {
+    console.log(element.id);
+    auth2.attachClickHandler(element, {},
+        function(googleUser) {
+          document.getElementById('customBtn').innerHTMl = "載入中";
+               
+      $.ajax({
+            type:"get",
+            url:'https://script.google.com/macros/s/AKfycbzaYfdP6h4OSwN209y7eb4sS-MgChQ2sdTXekueil7Tq-rgmCiO87Gf/exec?email=' + googleUser.getBasicProfile().getEmail()  ,
+            dataType:"text",
+            success:function(res){
+            window.location.replace(res);
+            }
+        })
+      
+        }, function(error) {
+          alert(JSON.stringify(error, undefined, 2));
+        });
+  }
+  </script>
+    
   <script>startApp();</script>
     </center>
 </body>
