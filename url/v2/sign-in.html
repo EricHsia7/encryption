@@ -23,6 +23,7 @@ position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
+transition:0.8s;
 }
 
 #customBtn .icon {
@@ -78,8 +79,8 @@ var url = new URL(getUrlString);
     console.log(element.id);
     auth2.attachClickHandler(element, {},
         function(googleUser) {
-          document.getElementById('customBtn').innerHTML = "載入中";
-               
+          document.getElementById('customBtn').innerHTML = "";
+           $('#customBtn').css({'width':'55px'});
 
    
       
