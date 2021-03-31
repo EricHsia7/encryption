@@ -56,6 +56,12 @@ float:left;
     
     
       <script>
+        
+        
+        var getUrlString = location.href;
+var url = new URL(getUrlString);
+        
+        
   var googleUser = {};
   var startApp = function() {
     gapi.load('auth2', function(){
@@ -74,10 +80,7 @@ float:left;
         function(googleUser) {
           document.getElementById('customBtn').innerHTML = "載入中";
                
-      
 
-
-//var emailsha = sha512(googleUser.getBasicProfile().getEmail()) ;
    
       
       
@@ -86,6 +89,14 @@ float:left;
           alert(JSON.stringify(error, undefined, 2));
         });
   }
+        function emailoc() {
+          if(sha512(googleUser.getBasicProfile().getEmail()) === url.searchParams.get("emk")) {
+          return true
+          }
+          else {
+            return false
+          }
+        }
   </script>
     
   <script>startApp();</script>
