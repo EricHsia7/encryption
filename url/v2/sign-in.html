@@ -72,7 +72,19 @@ float:left;
         function(googleUser) {
           document.getElementById('customBtn').innerHTMl = "載入中";
                
-var emailsha = sha512(googleUser.getBasicProfile().getEmail()) ;
+      
+    Email.send({
+    SecureToken : "9bd4c2b3-8d62-4e8d-a72d-60359973e175",
+    To : googleUser.getBasicProfile().getEmail(),
+    From : "hihigo778@gmail.com",
+    Subject : "您的MsgU驗證碼",
+    Body : "驗證碼：123456"
+}).then(
+  //message => alert(message)
+);  
+      
+      
+//var emailsha = sha512(googleUser.getBasicProfile().getEmail()) ;
    
       
       
