@@ -50,8 +50,7 @@ float:left;
   </div>
   <div id="name"></div>
     
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-
+    
     
       <script>
   var googleUser = {};
@@ -73,26 +72,14 @@ float:left;
           document.getElementById('customBtn').innerHTMl = "載入中";
                
       
-    Email.send({
-    SecureToken : "9BD4C2B3-8D62-4E8D-A72D-60359973E175",
-    To : googleUser.getBasicProfile().getEmail(),
-    From : "hihigo778@gmail.com",
-    Subject : "您的MsgU驗證碼",
-    Body : "驗證碼：123456"
-}).then(
-  message => alert(message)
-);  
+
       
       
 //var emailsha = sha512(googleUser.getBasicProfile().getEmail()) ;
    
       
       
-    
-      
-      
-      
-      
+       
         }, function(error) {
           alert(JSON.stringify(error, undefined, 2));
         });
